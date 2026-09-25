@@ -1,0 +1,21 @@
+.markdown {
+  strong {
+    font-weight: bold;
+  }
+
+  ul {
+    padding-inline-start: var(--padding-more);
+  }
+
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  code {
+    padding: var(--padding-lesser);
+    border-radius: var(--border-radius-less);
+    background-color: rgba(1, 1, 1, 0.5)
+  }
+}
