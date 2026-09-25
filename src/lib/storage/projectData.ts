@@ -2,7 +2,7 @@ import { projects } from '../data'
 import type { Project, ProjectEntry } from '../types'
 
 // so during dev it doesnt get rate limited
-
+// oxlint-disable-next-line no-constant-binary-expression
 const dummy = true && import.meta.env.DEV
 const cacheKey = 'projects'
 const cacheTTL = 60 * 60 * 1000
