@@ -96,7 +96,7 @@ async function getProjectsStats(project: Project): Promise<ProjectEntry> {
   if (dummy) {
     return {
       project: project,
-      stars: 1,
+      stars: 100000000,
       downloads: {
         modrinth: 1,
         curseforge: 1,

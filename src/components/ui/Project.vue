@@ -29,14 +29,14 @@ function formatNumber(value: number): string {
     <div class="title-container">
       <Icon v-if="entry.project.icon" :icon="entry.project.icon" :size="Size.LARGER" />
       <h2 class="project-title">{{ entry.project.name }}</h2>
+      <template v-if="entry.stars !== undefined">
+        <p class="github-stars">
+          <Icon icon="Star" />
+          {{ formatNumber(entry.stars) }}
+        </p>
+      </template>
     </div>
     <p class="project-description">{{ entry.project.summary }}</p>
-    <template v-if="entry.stars !== undefined">
-      <p class="github-stars">
-        <Icon icon="Star" />
-        {{ formatNumber(entry.stars) }}
-      </p>
-    </template>
     <div class="meta">
       <div class="tags">
         <template v-for="tag in entry.project.tags.slice(0, 3)" v-bind:key="tag">
@@ -69,7 +69,6 @@ function formatNumber(value: number): string {
   position: relative;
   width: fit-content;
   max-width: 350px;
-  padding-right: calc(var(--padding) + 1rem);
   cursor: pointer;
   &:hover {
     background-color: var(--color-background-alt-lighter);
@@ -82,6 +81,9 @@ function formatNumber(value: number): string {
   display: inline-flex;
   align-items: center;
   gap: var(--gap-less);
+  .icon {
+    align-self: flex-start;
+  }
 }
 
 .project-title {
@@ -96,7 +98,8 @@ function formatNumber(value: number): string {
 .github-stars {
   display: flex;
   align-items: center;
-  position: absolute;
+  align-self: flex-start;
+  margin-left: auto;
   top: var(--padding);
   right: var(--padding);
 }
