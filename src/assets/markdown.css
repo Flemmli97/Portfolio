@@ -16,6 +16,6 @@
   code {
     padding: var(--padding-lesser);
     border-radius: var(--border-radius-less);
-    background-color: rgba(1, 1, 1, 0.5)
+    background-color: rgba(1, 1, 1, 0.5);
   }
 }
