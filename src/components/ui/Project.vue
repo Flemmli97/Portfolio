@@ -81,9 +81,6 @@ function formatNumber(value: number): string {
   display: inline-flex;
   align-items: center;
   gap: var(--gap-less);
-  .icon {
-    align-self: flex-start;
-  }
 }
 
 .project-title {
