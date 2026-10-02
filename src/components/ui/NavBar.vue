@@ -33,6 +33,10 @@ const additionalRoutes: Route[] = [
     url: 'https://wiki.blazing-coop.net',
   },
   {
+    name: 'DataGen',
+    url: 'https://misode.blazing-coop.net',
+  },
+  {
     name: 'Paste',
     url: 'https://blazing-coop.net/paste',
   },
