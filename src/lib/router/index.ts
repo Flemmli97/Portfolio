@@ -20,12 +20,8 @@ const router = createRouter({
       component: () => import('@/views/Skills.vue'),
     },
     {
-      path: '/missingno',
-      component: () => import('@/views/Missingno.vue'),
-    },
-    {
       path: '/:pathMatch(.*)*',
-      redirect: '/missingno',
+      component: () => import('@/views/Missingno.vue'),
     },
   ],
 })
