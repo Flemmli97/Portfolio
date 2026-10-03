@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import Link from '@/components/element/Link.vue'
+import Icon from '@/components/element/Icon.vue'
+import { Size } from '@/lib/types'
+</script>
+
 <template>
   <div id="home" class="content">
     <img class="profile" src="https://github.com/Flemmli97.png" />
@@ -13,7 +19,14 @@
       modding around 2016 and have been at it since. You can check out all my relevant projects
       under the Project page (or under my github).
     </p>
-    <p class="ending">This website has been created using Vue.js</p>
+    <p class="ending">
+      This website has been created using Vue.js (
+      <Link href="https://github.com/Flemmli97/Portfolio"
+        >Source
+        <Icon icon="External" :size="Size.SMALL" />
+      </Link>
+      )
+    </p>
   </div>
 </template>
 
@@ -49,5 +62,11 @@
 
 .about {
   margin: var(--margin-more);
+}
+
+.ending {
+  a {
+    color: var(--color-primary);
+  }
 }
 </style>
