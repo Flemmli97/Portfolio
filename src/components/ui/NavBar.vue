@@ -38,7 +38,7 @@ const additionalRoutes: Route[] = [
   },
   {
     name: 'Paste',
-    url: 'https://blazing-coop.net/paste',
+    url: 'https://paste.blazing-coop.net',
   },
 ]
 
